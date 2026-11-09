@@ -128,3 +128,217 @@ ul.custom-list li i {
   font-size: 1.2em;
   margin-top: 4px;
 }
+
+/* =========================================
+   4. LAYOUT 2 KOLOM & GAMBAR (SLIDE 3-9)
+   ========================================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.badge-case {
+  background: rgba(129, 140, 248, 0.2);
+  color: var(--secondary);
+  border-color: rgba(129, 140, 248, 0.5);
+}
+
+.img-box {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek Hover sesuai syarat interaktivitas */
+.img-box:hover, .card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.img-box img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 !important;
+  display: block;
+}
+
+.img-caption {
+  font-size: 0.65em !important;
+  color: var(--text-muted);
+  margin: 10px 0 2px 0 !important;
+  font-style: italic;
+}
+
+/* Responsif untuk layar HP / Tablet */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .img-box img {
+    height: 180px;
+  }
+}
+
+
+
+/* =========================================
+   5. MEDIA INTERAKTIF (VIDEO, SPOTIFY, IG)
+   ========================================= */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Desain Kartu Spotify */
+.spotify-card, .ig-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-header {
+  color: #4ade80;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.spotify-cover {
+  width: 100%;
+  height: 140px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 !important;
+}
+
+.spotify-info h4 {
+  font-size: 0.85em;
+  margin: 10px 0 2px 0;
+  color: #fff;
+}
+
+.spotify-info p {
+  font-size: 0.65em;
+  color: var(--text-muted);
+  margin: 0 0 10px 0;
+}
+
+/* Animasi Equalizer Musik */
+.equalizer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  height: 25px;
+  margin-bottom: 12px;
+}
+
+.equalizer span {
+  width: 6px;
+  height: 6px;
+  background: #4ade80;
+  border-radius: 3px;
+  transition: height 0.2s ease;
+}
+
+.equalizer.playing span {
+  animation: bounceBar 0.6s infinite ease-in-out alternate;
+}
+.equalizer.playing span:nth-child(2) { animation-delay: 0.2s; }
+.equalizer.playing span:nth-child(3) { animation-delay: 0.4s; }
+.equalizer.playing span:nth-child(4) { animation-delay: 0.1s; }
+.equalizer.playing span:nth-child(5) { animation-delay: 0.3s; }
+
+@keyframes bounceBar {
+  0% { height: 6px; }
+  100% { height: 25px; }
+}
+
+.btn-spotify {
+  background: #4ade80;
+  color: #0f172a;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.7em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-spotify:hover {
+  transform: scale(1.05);
+}
+
+/* Desain Kartu Instagram */
+.ig-card {
+  border-color: rgba(244, 114, 182, 0.35);
+}
+
+.ig-header {
+  text-align: left;
+  font-size: 0.7em;
+  color: #f472b6;
+  margin-bottom: 8px;
+}
+
+.ig-card img {
+  width: 100%;
+  height: 175px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.ig-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.btn-like {
+  background: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+  border: 1px solid #f472b6;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.7em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-like.liked {
+  background: #f472b6;
+  color: #0f172a;
+}
+
+.like-counter {
+  font-size: 0.75em;
+  color: var(--text-light);
+}
