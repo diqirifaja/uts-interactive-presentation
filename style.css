@@ -1,0 +1,130 @@
+/* =========================================
+   1. VARIABEL WARNA & FONT (No Hardcoded Values)
+   ========================================= */
+:root {
+  --bg-dark: #0f172a;        /* Warna Latar Utama (Slate Dark) */
+  --card-bg: rgba(30, 41, 59, 0.75); /* Warna Kotak Transparan */
+  --primary: #38bdf8;        /* Warna Aksen Utama (Cyan Modern) */
+  --secondary: #818cf8;      /* Warna Aksen Kedua (Indigo) */
+  --success: #4ade80;        /* Warna Hijau Benar/Sukses */
+  --danger: #f87171;         /* Warna Merah Salah */
+  --text-light: #f8fafc;     /* Warna Teks Utama */
+  --text-muted: #94a3b8;     /* Warna Teks Redup */
+}
+
+/* Mengatur latar belakang utama dan jenis huruf */
+.reveal-viewport {
+  background: radial-gradient(circle at top right, #1e293b, var(--bg-dark));
+}
+
+.reveal {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-light);
+  font-size: 26px; /* Ukuran dasar yang pas, tidak raksasa */
+}
+
+/* =========================================
+   2. UKURAN JUDUL (TYPOGRAPHY PROPORSIONAL)
+   ========================================= */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: none; /* Mematikan huruf kapital paksa bawaan Reveal.js */
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 0.6em;
+}
+
+.reveal h1.main-title {
+  font-size: 2.4em; /* Ukuran judul utama yang pas */
+  font-weight: 800;
+    background: linear-gradient(90deg, #ffffff, var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  margin-top: 15px;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+  color: var(--primary);
+}
+
+.reveal h3.subtitle {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 1.5em;
+}
+
+/* =========================================
+   3. KOMPONEN VISUAL (BADGE, CARD, AUTHOR)
+   ========================================= */
+.badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.65em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.author-box {
+  display: inline-block;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 35px;
+  border-radius: 14px;
+  margin-top: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.author-box p {
+  margin: 5px 0;
+  font-size: 0.85em;
+}
+
+.author-box .npm {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.75em;
+}
+
+/* Kotak Materi (Card) */
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px 35px;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+/* Daftar Poin Rapi dengan Ikon */
+ul.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.custom-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+ul.custom-list li:last-child {
+  margin-bottom: 0;
+}
+
+ul.custom-list li i {
+  color: var(--primary);
+  font-size: 1.2em;
+  margin-top: 4px;
+}
