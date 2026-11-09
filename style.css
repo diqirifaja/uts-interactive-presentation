@@ -342,3 +342,22 @@ ul.custom-list li i {
   font-size: 0.75em;
   color: var(--text-light);
 }
+
+.btn-action {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--text-light);
+  border: 1px solid var(--primary);
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+}
