@@ -1,6 +1,4 @@
-/* =========================================
-   1. VARIABEL WARNA & FONT (No Hardcoded Values)
-   ========================================= */
+/*1. VARIABEL WARNA & FONT (No Hardcoded Values) */
 :root {
   --bg-dark: #0f172a;        /* Warna Latar Utama (Slate Dark) */
   --card-bg: rgba(30, 41, 59, 0.75); /* Warna Kotak Transparan */
@@ -23,9 +21,7 @@
   font-size: 26px; /* Ukuran dasar yang pas, tidak raksasa */
 }
 
-/* =========================================
-   2. UKURAN JUDUL (TYPOGRAPHY PROPORSIONAL)
-   ========================================= */
+/*2. UKURAN JUDUL (TYPOGRAPHY PROPORSIONAL)*/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
   font-family: 'Poppins', sans-serif;
   text-transform: none; /* Mematikan huruf kapital paksa bawaan Reveal.js */
@@ -56,9 +52,7 @@
   margin-bottom: 1.5em;
 }
 
-/* =========================================
-   3. KOMPONEN VISUAL (BADGE, CARD, AUTHOR)
-   ========================================= */
+/*3. KOMPONEN VISUAL (BADGE, CARD, AUTHOR)*/
 .badge {
   display: inline-block;
   background: rgba(56, 189, 248, 0.15);
@@ -129,9 +123,7 @@ ul.custom-list li i {
   margin-top: 4px;
 }
 
-/* =========================================
-   4. LAYOUT 2 KOLOM & GAMBAR (SLIDE 3-9)
-   ========================================= */
+/*4. LAYOUT 2 KOLOM & GAMBAR (SLIDE 3-9)*/
 .grid-2 {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -187,14 +179,10 @@ ul.custom-list li i {
   }
 }
 
-
-
-/* =========================================
-   5. MEDIA INTERAKTIF (VIDEO, SPOTIFY, IG)
-   ========================================= */
+/*5. MEDIA INTERAKTIF (VIDEO, SPOTIFY, IG)*/
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* Rasio 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   border-radius: 10px;

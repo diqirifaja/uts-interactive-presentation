@@ -12,7 +12,7 @@ Reveal.initialize({
   transition: 'slide'  // Animasi perpindahan slide
 });
 
-// Fitur Interaktif Slide 7: Memutar Lagu "What If I Call - Alex Crichton"
+// Fitur Interaktif Slide 7: Memutar Lagu
 let isPlaying = false;
 
 function toggleMusic() {
